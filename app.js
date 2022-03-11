@@ -87,6 +87,30 @@ function connect( $0 ) {
 		;
 	}
 }
+function message( $0 ) {
+	const _1 = new Message( $0 )
+	; console.log(
+		'From ' + _1.messenger
+			+ ':\n' + _1.message
+	)
+	; _1.spawned = _1.spawn(
+		'python'
+		, [ 'text.py', $0.message ]
+	)
+	; _1.spawned.stderr.on( 'data', $0 => {
+		console.warn( $0 )
+		;
+	} )
+	;
+	function Message( $0 ) {
+		this.message = $0.message
+		; this.messenger = $0.messenger
+		; this.spawn = require( 'child_process' )
+			.spawn
+		; this.spawned = null
+		;
+	}
+}
 function server() {
 	const _1 = new HtmlServer
 	; _1.server = _1.http( _0.chat )
@@ -110,30 +134,6 @@ function server() {
 		; this.io = null
 		; this.server = null
 		; this.socket = require( 'socket.io' )
-		;
-	}
-}
-function message( $0 ) {
-	const _1 = new Message( $0 )
-	; console.log(
-		'From ' + _1.messenger
-			+ ':\n' + _1.message
-	)
-	; _1.spawned = _1.spawn(
-		'python'
-		, [ 'text.py', $0.message ]
-	)
-	; _1.spawned.stderr.on( 'data', $0 => {
-		console.warn( $0 )
-		;
-	} )
-	;
-	function Message( $0 ) {
-		this.message = $0.message
-		; this.messenger = $0.messenger
-		; this.spawn = require( 'child_process' )
-			.spawn
-		; this.spawned = null
 		;
 	}
 }
