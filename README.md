@@ -4,6 +4,8 @@ Using the https://webmonetization.org solution to remote control a raspberry pi 
 
 Basic pixelart functionality for a Raspberry Pi Zero W with a [Pimoroni unicorn hd HAT](https://shop.pimoroni.com/products/unicorn-hat-hd).
 
+Based on [this action plan](https://community.webmonetization.org/bestape/alchemy-cheerbot-mozfest-2022-web-monetization-action-plan-p56) and used by [this MozFest 2022 Emergent Session](https://schedule.mozillafestival.org/session/PRQV3L-1). 
+
 <p align="left">
 
    <img src="https://user-images.githubusercontent.com/3211305/157890344-722240ef-1119-45c7-8320-a64fbb1aa555.png" width="100%">
