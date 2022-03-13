@@ -16,6 +16,8 @@ Based on [this action plan](https://community.webmonetization.org/bestape/alchem
 
 Modify this repo's `wpa_supplicant.conf` with your wifi's information. 
 
+Modify this repo's `cheerbot/index.html` with your [payment pointer](https://esse-dev.github.io/a-web-monetization-story/).
+
 Follow the instructions here to flash a Raspberry Pi OS on a SD card:
 
 * `https://www.raspberrypi.com/documentation/computers/getting-started.html#using-raspberry-pi-imager`
@@ -34,12 +36,30 @@ Eject the SD, put it into the Raspberry Pi, plug the power USB into the Raspberr
 
 When booted, open Terminal in your computer `ctrl+alt+t` and SSH into the Raspberry Pi with `ssh pi@raspberrypi`.
 
-When you have entered the Raspberry Pi with SSH: 
+When you've entered the Raspberry Pi with SSH: 
 
-* change the password with `passwd`
+* change the password with `passwd`;
 
-* install the unicorn hd HAT dependencies with `curl https://get.pimoroni.com/unicornhathd | bash`
+* install the unicorn hd HAT dependencies with `curl https://get.pimoroni.com/unicornhathd | bash`.
 
-## join the Discord and help buidl cheerbot
+Modify `cheerbot/app.js`'s port and url `5571` and `mozfest` default definitions to your preference.
+
+To turn on the server, `cd cheerbot` and run `./app.js`.
+
+When the server is on, assuming port and url in `cheerbot/app.js` are unchanged, navigate to the remote control website with `http://YOUR_IP_ADDRESS:5571/mozfest`.
+
+Note that http is used, not https.
+
+See the image above for an example. 
+
+## port forward
+
+You'll have to port forward your router to your Raspberry Pi, which is different for every router.
+
+There's a good chance you can find instructions about how to port foward your router at [https://portforward.com](https://portforward.com/).
+
+To use a url rather than an IP address, change the A-record with your DNS server provider to your IP address.
+
+## join the Discord and help buidl cheerbot!
 
 https://discord.gg/KXzXR7DVqb
