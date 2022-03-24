@@ -42,11 +42,15 @@ When you've entered the Raspberry Pi with SSH:
 
 * install the unicorn hd HAT dependencies with `curl https://get.pimoroni.com/unicornhathd | bash`.
 
-Modify `cheerbot/app.js`'s port and url `5571` and `mozfest` default definitions to your preference.
+`cd cheerbot` to enter the cheerbot folder.
 
-To turn on the server, `cd cheerbot` and run `./app.js`.
+Run `npm install socket.io` to install socket.io.
 
-When the server is on, assuming port and url in `cheerbot/app.js` are unchanged, navigate to the remote control website with `http://YOUR_IP_ADDRESS:5571/mozfest`.
+Modify `app.js`'s port and url `5571` and `mozfest` default definitions to your preference.
+
+To turn on the server, run `./app.js`.
+
+When the server is on, assuming port and url in `app.js` are unchanged, navigate to the remote control website with `http://YOUR_IP_ADDRESS:5571/mozfest`.
 
 Note that http is used, not https.
 
