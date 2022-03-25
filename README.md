@@ -2,6 +2,8 @@
 
 Using the https://webmonetization.org solution to remote control a raspberry pi with fiat-$ payment.
 
+[MozFest presentation](https://www.youtube.com/watch?v=gU2WKhQRXQA&list=PLL0gyjXno6ejvzUw1SOfmKHFN6gPNjHfI&index=20).
+
 Basic pixelart functionality for a Raspberry Pi Zero W with a [Pimoroni unicorn hd HAT](https://shop.pimoroni.com/products/unicorn-hat-hd).
 
 Based on [this action plan](https://community.webmonetization.org/bestape/alchemy-cheerbot-mozfest-2022-web-monetization-action-plan-p56) and used by [this MozFest 2022 Emergent Session](https://schedule.mozillafestival.org/session/PRQV3L-1). 
